@@ -2,7 +2,6 @@ import * as React from 'react';
 import {
     LocationCtx, locationCtx,
     RouterCtx, routerCtx,
-    getLocation,
 } from './ctx';
 
 
@@ -13,6 +12,11 @@ const makeActionHelper = (after: () => void) => <T extends any[]>(
     cb(...args);
     after();
 };
+
+const getLocation = () => ({
+    host: window.location.host,
+    path: window.location.pathname,
+})
 
 
 export const HistoryRouter: React.FC = props => {

@@ -23,9 +23,3 @@ export const routerCtx = React.createContext<RouterCtx>({
     push: noImpl,
     replace: noImpl,
 })
-
-
-export const getLocation = () => ({
-    host: window.location.host,
-    path: window.location.pathname,
-})
