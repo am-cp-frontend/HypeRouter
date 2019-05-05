@@ -1,0 +1,48 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+        "object-literal-sort-keys": false,
+        "interface-name": false,
+        "member-access": false,
+        "semicolon": false,
+        "ordered-imports": false,
+        "no-consecutive-blank-lines": [
+            true,
+            2
+        ],
+        "quotemark": [
+            true,
+            "single"
+        ],
+        "arrow-parens": [
+            true,
+            "ban-single-arg-parens"
+        ],
+        "member-ordering": [
+            true,
+            {
+                "order": "fields-first"
+            }
+        ],
+        "indent": [
+            true,
+            "spaces",
+            4
+        ],
+        "max-classes-per-file": false,
+        "curly": [
+            true,
+            "ignore-same-line"
+        ]
+    },
+    "rulesDirectory": [],
+    "linterOptions": {
+        "exclude": [
+            "package.json"
+        ]
+    }
+}
