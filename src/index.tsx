@@ -5,6 +5,7 @@ import { HistoryRouter, Link, Route, NavLink } from './components/Router'
 import { Switch } from './components/Router/Switch';
 import { AsyncRoute } from './components/Router/AsyncRoute';
 import { Redirect } from './components/Router/Redirect';
+import ChunkyPage from './components/ChunkyPage';
 
 const isUserRoute = (path: string) => path.startsWith('/user')
 const active: React.CSSProperties = {
@@ -29,6 +30,7 @@ const App: React.FC = () => (
             <ul>
                 <li> <NavLink href='/' exact activeStyle={active}>Home</NavLink> </li>
                 <li> <NavLink href='/about' exact activeStyle={active}>About</NavLink> </li>
+                <li> <NavLink href='/chunky' exact activeStyle={active}>Chunky</NavLink> </li>
                 <li> <NavLink href='/user/name' activeStyle={active}>@username</NavLink> </li>
             </ul>
         </nav>
@@ -44,6 +46,10 @@ const App: React.FC = () => (
 
                 <AsyncRoute path='/about' exact>
                     <AboutPage />
+                </AsyncRoute>
+
+                <AsyncRoute path='/chunky' exact>
+                    <ChunkyPage />
                 </AsyncRoute>
 
                 <Route path='/' exact>
